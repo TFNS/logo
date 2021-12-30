@@ -1,0 +1,73 @@
+<svg height="800" width="800" viewBox="0 0 128 128" version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+
+        <mask id="content-mask">
+            <circle cx="64" cy="64" r="58" fill="#fff" />
+        </mask>
+        <svg id="star" height="32" width="32" viewBox="0 0 128 128">
+            <defs>
+                <mask id="star-mask">
+                    <circle cx="64" cy="64" r="64" fill="#fff" />
+                    <g fill="black">
+                        <circle r="68" />
+                        <circle cx="128" r="68" />
+                        <circle cy="128" r="68" />
+                        <circle cx="128" cy="128" r="68" />
+                    </g>
+                </mask>
+            </defs>
+            <rect width="128" height="128" mask="url(#star-mask)" fill="#fff" />
+        </svg>
+        <svg id="sun" height="52" width="52" x="0" y="0" viewBox="0 0 128 128">
+            <defs>
+                <polygon id="spike"  points="64,10 42,64 86,64" fill="#fff" />
+                <polygon id="spike2" points="64,18 44,64 84,64" fill="#fff" />
+            </defs>
+            <use xlink:href="#spike"  transform="rotate(  0, 64, 64)" />
+            <use xlink:href="#spike2" transform="rotate( 45, 64, 64)" />
+            <use xlink:href="#spike"  transform="rotate( 90, 64, 64)" />
+            <use xlink:href="#spike2" transform="rotate(135, 64, 64)" />
+            <use xlink:href="#spike"  transform="rotate(180, 64, 64)" />
+            <use xlink:href="#spike2" transform="rotate(225, 64, 64)" />
+            <use xlink:href="#spike"  transform="rotate(270, 64, 64)" />
+            <use xlink:href="#spike2" transform="rotate(315, 64, 64)" />
+            <circle cx="64" cy="64" r="25" fill="#4c798e" />
+        </svg>
+        <svg id="network" height="128" width="128" x="0" y="0" viewBox="0 0 128 128">
+            <defs>
+                <mask id="ellipse-mask">
+                    <ellipse cx="64" cy="85" rx="50" ry="25" fill="#fff" stroke="#fff" stroke-width="2" />
+                </mask>
+            </defs>
+            <g stroke="#fff" stroke-width="2" fill="none">
+                <ellipse cx="64" cy="85" rx="50" ry="25" />
+                <ellipse cx="64" cy="85" rx="50" ry="15" />
+                <circle cx="0" cy="85" r="40" mask="url(#ellipse-mask)" />
+                <circle cx="128" cy="85" r="40" mask="url(#ellipse-mask)" />
+                <line x1="64" y1="60" x2="64" y2="110" />
+                <line x1="14" y1="85" x2="114" y2="85" />
+            </g>
+            <g stroke-width="1" stroke="#fff">
+                <line x1="38" y1="72" x2="88" y2="85" />
+                <line x1="64" y1="100" x2="88" y2="85" />
+                <line x1="64" y1="60" x2="38" y2="72" />
+                <circle cx="64" cy="60" r="4" fill="#4c798e" />
+                <circle cx="38" cy="72" r="4" fill="#4c798e" />
+                <circle cx="64" cy="100" r="4" fill="#4c798e" />
+                <circle cx="88" cy="85" r="4" fill="#4c798e" />
+            </g>
+        </svg>
+    </defs>
+
+    <circle cx="64" cy="64" r="64" fill="#4c798e" />
+    <circle cx="64" cy="64" r="60" fill="#4c798e" stroke="#fff" stroke-width="2" />
+    <g mask="url(#content-mask)">
+        <use xlink:href="#star" transform="translate(24, 16) scale(.75)" />
+        <use xlink:href="#star" transform="translate(7, 36)" />
+        <use xlink:href="#star" transform="translate(37, 41) scale(.4)" />
+        <use xlink:href="#sun" transform="translate(65, 4) scale(1.2)" />
+        <use xlink:href="#network" />
+    </g>
+</svg>
